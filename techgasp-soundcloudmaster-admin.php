@@ -43,7 +43,7 @@
 </br>
 </br>
 <p><h3>Options & Configuration:</h3></p>
-<p><b>All configuration options are available in your widgets page. <b>SoundClound Master Widget</b>:</p>
+<p><b>All configuration options are available in your widgets page. SoundClound Master Widget:</b></p>
 <p>Select or <em>"add"</em > SoundCloud Master Widget. Configure your settings. Select widget position according to your template. That easy...</p>
 <p><b>Insert SoundClound Master Widget inside Pages and Posts (advanced version only):</b></p>
 <p>Copy and Paste this shortcode inside your pages or posts [soundcloudmaster id=xx] replace xx with your sidebar number, ie [soundcloudmaster id=sidebar-1]</p>
