@@ -3,7 +3,7 @@ Contributors: Techgasp
 Tags: wordpress, soundcloud, sound, music, mp3, wav, player, playlist, embend, music sets, sets, sound cloud
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 
 SoundCloud Master is a light weight and shiny clean code wordpress plugin WIDGET that you need to show off and sell your music.
@@ -71,6 +71,11 @@ Easy and intuitive to use. Check the screenshots.
 
 
 == Changelog ==
+
+= 2.2 =
+* Fixing minor issues with lyrics botton
+* Fixing admin page bold text
+* Uploading new banner
 
 = 2.1 =
 * Stable Release

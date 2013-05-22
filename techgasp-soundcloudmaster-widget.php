@@ -1,6 +1,6 @@
 <?php
 //Load Shortcode Framework
-require_once('techgasp-soundcloudmaster-shortcode.php');
+
 //Hook Widget
 add_action( 'widgets_init', 'techgasp_soundcloudmaster_widget' );
 //Register Widget
@@ -24,16 +24,13 @@ class techgasp_soundcloudmaster_widget extends WP_Widget {
 		$soundcloudconnect_page = $instance['soundcloudconnect_page'];
 		$show_soundcloudlyrics = isset( $instance['show_soundcloudlyrics'] ) ? $instance['show_soundcloudlyrics'] :false;
 		$soundcloudlyrics_page = $instance['soundcloudlyrics_page'];
-		$show_soundcloudplayer = isset( $instance['show_soundcloudplayer'] ) ? $instance['show_soundcloudplayer'] :false;
-		$soundcloudplayer_code = $instance['soundcloudplayer_code'];
 		echo $before_widget;
 		
 		// Display the widget title
 	if ( $title )
 		echo $before_title . $title . $after_title;
 	//Display SoundClound Player
-	if ( $show_soundcloudplayer )
-		echo $soundcloudplayer_code;
+
 	//Display SoundClound Connect
 	if ( $show_soundcloudconnect )
 			echo '<a href="'.$soundcloudconnect_page.'" target="_blank"><img src="../wp-content/plugins/soundcloud-master/btn-connect-s.png"></a>' .
@@ -52,13 +49,11 @@ class techgasp_soundcloudmaster_widget extends WP_Widget {
 		$instance['soundcloudconnect_page'] = $new_instance['soundcloudconnect_page'];
 		$instance['show_soundcloudlyrics'] = $new_instance['show_soundcloudlyrics'];
 		$instance['soundcloudlyrics_page'] = $new_instance['soundcloudlyrics_page'];
-		$instance['show_soundcloudplayer'] = $new_instance['show_soundcloudplayer'];
-		$instance['soundcloudplayer_code'] = $new_instance['soundcloudplayer_code'];
 		return $instance;
 	}
 	function form( $instance ) {
 	//Set up some default widget settings.
-	$defaults = array( 'title' => __('SoundCloud Master', 'soundcloud master'), 'show_soundcloudconnect' => false, 'soundcloudconnect_page' => false, 'show_soundcloudlyrics' => false, 'soundcloudlyrics_page' => false, 'show_soundcloudplayer' => false, 'soundcloudplayer_code' => false );
+	$defaults = array( 'title' => __('SoundCloud Master', 'soundcloud master'), 'show_soundcloudconnect' => false, 'soundcloudconnect_page' => false, 'show_soundcloudlyrics' => false, 'soundcloudlyrics_page' => false );
 	$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 		<b>Check the buttons to be displayed:</b>
@@ -79,16 +74,6 @@ class techgasp_soundcloudmaster_widget extends WP_Widget {
 	<label for="<?php echo $this->get_field_id( 'soundcloudlyrics_page' ); ?>"><?php _e('insert SoundClound Lyrics Link:', 'soundclound master'); ?></label></br>
 	<input id="<?php echo $this->get_field_id( 'soundcloudlyrics_page' ); ?>" name="<?php echo $this->get_field_name( 'soundcloudlyrics_page' ); ?>" value="<?php echo $instance['soundcloudlyrics_page']; ?>" style="width:auto;" />
 	</p>
-	<hr>
-	<p>
-	<input type="checkbox" <?php checked( (bool) $instance['show_soundcloudplayer'], true ); ?> id="<?php echo $this->get_field_id( 'show_soundcloudplayer' ); ?>" name="<?php echo $this->get_field_name( 'show_soundcloudplayer' ); ?>" />
-	<label for="<?php echo $this->get_field_id( 'show_soundcloudplayer' ); ?>"><b><?php _e('SoundCloud Player', 'soundcloud master'); ?></b></label>
-	</p>
-	<p>
-	<label for="<?php echo $this->get_field_id( 'soundcloudplayer_code' ); ?>"><?php _e('insert SoundClound Player Code:', 'soundclound master'); ?></label></br>
-	<textarea cols="40" rows="5" id="<?php echo $this->get_field_id( 'soundcloudplayer_code' ); ?>" name="<?php echo $this->get_field_name( 'soundcloudplayer_code' ); ?>" ><?php echo stripslashes ($instance['soundcloudplayer_code']); ?></textarea>
-	</p>
-	<p>Copy and Paste the html5 iframe code from a single track or set of tracks</p>
 	<hr>
 	<p><b>SoundCloud Master Advanced Version:</b> constains the extra SoundCloud Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported. Includes shortcode framework.</p>
 	<p><a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Soundclound Master Advanced Version">Soundclound Master Advanced Version</a></p>
