@@ -75,7 +75,7 @@ class techgasp_soundcloudmaster_widget extends WP_Widget {
 	<input id="<?php echo $this->get_field_id( 'soundcloudlyrics_page' ); ?>" name="<?php echo $this->get_field_name( 'soundcloudlyrics_page' ); ?>" value="<?php echo $instance['soundcloudlyrics_page']; ?>" style="width:auto;" />
 	</p>
 	<hr>
-	<p><b>SoundCloud Master Advanced Version:</b> constains the extra SoundCloud Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported. Includes shortcode framework.</p>
+	<p><b>SoundCloud Master Advanced Version:</b> contains the extra SoundCloud Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported. Includes shortcode framework.</p>
 	<p><a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Soundclound Master Advanced Version">Soundclound Master Advanced Version</a></p>
 	<?php
 	}
