@@ -1,6 +1,6 @@
 === SoundCloud Master ===
 Contributors: Techgasp
-Tags: wordpress, soundcloud, sound, music, mp3, wav, player, playlist, embend, music sets, sets, sound cloud
+Tags: wordpress, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
 Tested up to: 3.5.1
 Stable tag: 2.3
