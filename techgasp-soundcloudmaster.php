@@ -2,7 +2,7 @@
 /**
 Plugin Name: SoundCloud Master
 Plugin URI: http://wordpress.techgasp.com/soundcloud-master/
-Version: 2.3
+Version: 2.4
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: soundcloud-master
@@ -32,7 +32,11 @@ define('TECHGASP_SOUNDCLOUDMASTER_ID', 'soundcloud-master-options');
 // DEFINE PLUGIN NICK
 define('TECHGASP_SOUNDCLOUDMASTER_NICK', 'SoundCloud Master');
 
+// HOOK WIDGET
 require_once('techgasp-soundcloudmaster-widget.php');
+
+// HOOK INVITATION
+
 
     class techgasp_soundcloudmaster
     {
@@ -97,7 +101,7 @@ require_once('techgasp-soundcloudmaster-widget.php');
 		*/
 		public static function content_with_quote($content)
 		{
-			$quote = '<p><blockquote>' . get_option('tsm_quote') . '</blockquote></p>';
+			$quote = '<p>' . get_option('tsm_quote') . '</p>';
 			return $content . $quote;
 		}
 		
