@@ -2,7 +2,7 @@
 /**
 Plugin Name: SoundCloud Master
 Plugin URI: http://wordpress.techgasp.com/soundcloud-master/
-Version: 2.5
+Version: 4.0
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: soundcloud-master
@@ -24,22 +24,23 @@ License: GPL2 or later
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-if(!class_exists('techgasp_soundcloudmaster')) :
+
+if(!class_exists('soundcloud_master')) :
 
 // DEFINE PLUGIN ID
-define('TECHGASP_SOUNDCLOUDMASTER_ID', 'soundcloud-master-options');
+define('SOUNDCLOUD_MASTER_ID', 'soundcloud-master');
 
 // DEFINE PLUGIN NICK
-define('TECHGASP_SOUNDCLOUDMASTER_NICK', 'SoundCloud Master');
+define('SOUNDCLOUD_MASTER_NICK', 'SoundCloud Master');
 
 // HOOK WIDGET
-require_once('techgasp-soundcloudmaster-widget.php');
+require_once('includes/soundcloud-master-widget.php');
 
 // HOOK INVITATION
 
+// HOOK SHORTCODE
 
-    class techgasp_soundcloudmaster
-    {
+	class soundcloud_master{
 		/** function/method
 		* Usage: return absolute file path
 		* Arg(1): string
@@ -54,9 +55,9 @@ require_once('techgasp-soundcloudmaster-widget.php');
 		* Arg(0): null
 		* Return: void
 		*/
-		public static function techgasp_soundcloudmaster_register()
+		public static function soundcloud_master_register()
 		{
-			register_setting(TECHGASP_SOUNDCLOUDMASTER_ID.'_options', 'tsm_quote');
+			register_setting(SOUNDCLOUD_MASTER_ID, 'tsm_quote');
 		}
 		/** function/method
 		* Usage: hooking (registering) the plugin menu
@@ -66,8 +67,8 @@ require_once('techgasp-soundcloudmaster-widget.php');
 		public static function menu()
 		{
 			// Create menu tab
-			add_options_page(TECHGASP_SOUNDCLOUDMASTER_NICK.' Plugin Options', TECHGASP_SOUNDCLOUDMASTER_NICK, 'manage_options', TECHGASP_SOUNDCLOUDMASTER_ID.'_options', array('techgasp_soundcloudmaster', 'options_page'));
-			add_filter( 'plugin_action_links', array('techgasp_soundcloudmaster', 'techgasp_soundcloudmaster_link'), 10, 2 );
+			add_options_page(SOUNDCLOUD_MASTER_NICK.' Plugin Options', SOUNDCLOUD_MASTER_NICK, 'manage_options', SOUNDCLOUD_MASTER_ID.'-admin', array('soundcloud_master', 'options_page'));
+			add_filter( 'plugin_action_links', array('soundcloud_master', 'soundcloud_master_link'), 10, 2 );
 		}
 		/** function/method
 		* Usage: show options/settings form page
@@ -80,19 +81,19 @@ require_once('techgasp-soundcloudmaster-widget.php');
 			{
 				wp_die( __('You do not have sufficient permissions to access this page.') );
 			}
-			$plugin_id = TECHGASP_SOUNDCLOUDMASTER_ID;
+			$plugin_id = SOUNDCLOUD_MASTER_ID;
 			// display options page
-			include(self::file_path('techgasp-soundcloudmaster-admin.php'));
+			include(self::file_path('includes/soundcloud-master-admin.php'));
 		}
 		/** function/method
                 * Usage: show options/settings form page
                 * Arg(0): null
                 * Return: void
                 */
-		 public static function techgasp_soundcloudmaster_widget()
+		 public static function soundcloud_master_widget()
                 {
                         // display widget page
-                        include(self::file_path('techgasp-soundcloudmaster-widget.php'));
+                        include(self::file_path('includes/soundcloud-master-widget.php'));
                 }
 		/** function/method
 		* Usage: filtering the content
@@ -104,23 +105,24 @@ require_once('techgasp-soundcloudmaster-widget.php');
 			$quote = '<p>' . get_option('tsm_quote') . '</p>';
 			return $content . $quote;
 		}
-		
 		// Add settings link on plugin page
-		public static function techgasp_soundcloudmaster_link($links, $file) {
-		static $this_plugin;
-		if (!$this_plugin) $this_plugin = plugin_basename(__FILE__);
-		if ($file == $this_plugin){
-		$settings_link = '<a href="' . admin_url( 'options-general.php?page='.TECHGASP_SOUNDCLOUDMASTER_ID).'_options' . '">' . __( 'Settings' ) . '</a>';
-		array_unshift($links, $settings_link);
-		}
+		public static function soundcloud_master_link($links, $file) {
+			static $this_plugin;
+			if (!$this_plugin) $this_plugin = plugin_basename(__FILE__);
+			if ($file == $this_plugin){
+				$settings_link = '<a href="' . admin_url( 'options-general.php?page='.SOUNDCLOUD_MASTER_ID).'-admin' . '">' . __( 'Settings' ) . '</a>';
+				array_unshift($links, $settings_link);
+			}
 		return $links;
 		}
+		// Advanced Updater
 	}
-		if ( is_admin() )
+	if ( is_admin() )
 		{
-		add_action('admin_init', array('techgasp_soundcloudmaster', 'techgasp_soundcloudmaster_register'));
-		add_action('admin_menu', array('techgasp_soundcloudmaster', 'menu'));
+		add_action('admin_init', array('soundcloud_master', 'soundcloud_master_register'));
+		add_action('admin_menu', array('soundcloud_master', 'menu'));
+		
 		}
-		add_filter('the_content', array('techgasp_soundcloudmaster', 'content_with_quote'));
+	add_filter('the_content', array('soundcloud_master', 'content_with_quote'));
 endif;
 ?>

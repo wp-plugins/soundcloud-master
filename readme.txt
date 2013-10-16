@@ -1,9 +1,9 @@
 === SoundCloud Master ===
 Contributors: Techgasp
-Tags: wordpress, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
+Tags: plugin, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 2.5
+Stable tag: 4.0
 License: GPLv2 or later
 
 SoundCloud Master is a light weight and shiny clean code wordpress plugin WIDGET that you need to show off and sell your music.
@@ -17,28 +17,45 @@ These are the main options we packed into this extension. SoundCloud player is a
 
 Easy and intuitive to use. Check the screenshots.
 
-**SoundCloud Master... Dj's for wordpress**
+**SoundCloud Master... DJ's for wordpress**
+
+IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
+
 
 **LITE Version Contains:**
 
 * Display or hide Widget Title
-* Soundcloud Connect Butotn
+* Soundcloud Connect Button
 
 **ADVANCED Version Contains:**
-
-[Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
 * Display or hide Widget Title
 * SoundCloud Connect Button
 * SoundCloud Lyrics Button
 * SoundCloud Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported)
-* Shortcode Framework. Publish widget inside pages and posts
+* Shortcode Framework v2. Publish widget inside pages and posts
+* [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
+
+**ONLINE DEMO**
+
+* Right of the page, sidebar widget
+* Inside the post, with shortcode framework v2
+* [Demo Link](http://wordpress.techgasp.com/soundcloud-master/)
+
+**More High Quality Plugins?**
+
+* For professional wordpress websites
+* Tested for fast page load times and SEO
+* Errors and conflicts free. NO JAVASCRIPT or AJAX
+* [Click Here](http://wordpress.techgasp.com/buy-all-techgasp-wordpress-plugins/)
+
 
 == Installation ==
 
-1. Upload everything into the "/wp-content/plugins/" directory of your WordPress site.
+1. Use the Wordpress Installer, Updater
 2. Activate in the "Plugins" admin panel.
-3. Visit the "Widget Page | SoundCloud Master" to configure the settings and your template widget position.
+3. Visit the "Widget Page | Soundcloud Master" to configure the settings and your template widget position.
+4. [Soundcloud Master Documentation](http://wordpress.techgasp.com/soundcloud-master-documentation)
 
 
 == Frequently Asked Questions ==
@@ -46,32 +63,41 @@ Easy and intuitive to use. Check the screenshots.
 = Issues with buttons display =
 * Please update to latest version. Up-to-date API's are available
 
-= WHERE IS THE PLAYER? =
-* ADVANCED Version constains all SoundCloud Buttons plus the SoundCloud Music Player.
-* [Advaced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
+= Where is the Player? =
+* Advanced Version contains: Display or hide Widget Title, Display or hide Soundcloud Connect Button, Display or hide Soundcloud Lyrics Button, Display or hide Soundcloud Player, Shortcode Framework v2, publish widget inside pages and posts
+* [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
 = Insert Widget in Pages or Posts =
-* ADVANCED Version constains the shortcode framework
-* Insert the code into the page or post. [soundcloudmaster id=x]
-* "x" stands for your sidebar number, ie sidebar-1, final code would be:
-* [soundcloudmaster id=sidebar-1]
-* [Advaced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
+* Advanced Version contains the shortcode framework v2
+* Insert the shortcode into any page or post. [soundcloud-master]
+* [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
+
+= What's this Shortcode Framework v2 =
+* It's a framework developed by TechGasp and built upon wordpress marvellous resources
+* Allows users to quickly and easily display plugins or widgets inside their pages and posts
+* It's available in all TechGasp advanced version plugins. Lite versions plugins do not include shortcode framework v2
+* [About Shortcode Framework v2](http://wordpress.techgasp.com/new-wordpress-framework-from-techgasp/)
 
 = Need More Help =
-* [ABOUT DOCUMENTATION](http://wordpress.techgasp.com)
-* [ABOUT INSTALLATION](http://wordpress.techgasp.com)
-* [SUPPORT](http://wordpress.techgasp.com/support)
+* [Soundcloud Master Documentation](http://wordpress.techgasp.com/soundcloud-master-documentation)
+* [Support](http://wordpress.techgasp.com/support)
 
 
 == Screenshots ==
 
 1. Widget With SoundCloud Buttons + SoundCloud Player with Set of Tracks.
 2. Widget With SoundCloud Buttons + SoundCloud Player with Single Track.
-3. Widget inside pages and posts. Shortcode framework implementation. SoundCloud Player with Set of Tracks. 
-4. Widget inside pages and posts. Shortcode framework implementations. SoundCloud Player with Single Track.
+3. Widget inside pages and posts. Shortcode framework v2 implementation. SoundCloud Player with Set of Tracks. 
+4. Widget inside pages and posts. Shortcode framework v2 implementations. SoundCloud Player with Single Track.
 
 
 == Changelog ==
+
+= 4.0 =
+* Implementing New Shortcode Framework v2. Shortcode box will now be available when editing a page or a post
+
+= 3.0 =
+* Implementing advanced updater
 
 = 2.5 =
 * Patching strict standards in WP_DEBUG mode
@@ -84,7 +110,7 @@ Easy and intuitive to use. Check the screenshots.
 * Added option to display or hide widget title
 
 = 2.2 =
-* Fixing minor issues with lyrics botton
+* Fixing minor issues with lyrics button
 * Fixing admin page bold text
 * Uploading new banner
 
@@ -106,6 +132,9 @@ Easy and intuitive to use. Check the screenshots.
 
 
 == Upgrade Notice ==
+
+= 4.0 =
+* IMPORTANT Upgrade to new TechGasp Plugin Framework
 
 = 2.1 =
 * IMPORTANT Upgrade to Stable release
