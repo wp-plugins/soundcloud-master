@@ -2,7 +2,7 @@
 Contributors: Techgasp
 Tags: plugin, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
-Tested up to: 3.6
+Tested up to: 3.7
 Stable tag: 4.0
 License: GPLv2 or later
 
