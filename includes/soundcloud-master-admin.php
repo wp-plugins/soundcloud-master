@@ -57,7 +57,7 @@
 <h3><img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />&nbsp;Widget Options:</h3>
 <div class="description">All <b>LITE</b> widget options are available in your widgets page. <b>Soundcloud Master Widget</b>.</div>
 <h3><img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;"/>&nbsp;Shortcode Options:</h3>
-<div class="description">Only available in <b>Soundcloud Master Advanced Version</b></div>
+<div class="description">Only available in <b>Soundcloud Master Advanced Version</b>.</div>
 <br>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 

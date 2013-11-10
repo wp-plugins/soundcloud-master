@@ -30,7 +30,8 @@ class soundcloud_master_widget extends WP_Widget {
 
 	//Display SoundClound Connect
 	if ( $show_soundcloudconnect )
-			echo '<a href="'.$soundcloudconnect_page.'" target="_blank"><img src="/wp-content/plugins/soundcloud-master/images/btn-connect-s.png"></a>' .
+			$url_loc = plugins_url();
+			echo '<a href="'.$soundcloudconnect_page.'" target="_blank"><img src="'.$url_loc.'/soundcloud-master/images/btn-connect-s.png"></a>' .
 					'&nbsp;';
 	//Display SoundCloud Lyrics
 
