@@ -2,7 +2,7 @@
 /**
 Plugin Name: SoundCloud Master
 Plugin URI: http://wordpress.techgasp.com/soundcloud-master/
-Version: 4.0.2
+Version: 4.1
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: soundcloud-master
