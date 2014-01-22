@@ -3,7 +3,7 @@ Contributors: Techgasp
 Tags: plugin, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
 Tested up to: 3.8
-Stable tag: 4.1
+Stable tag: 4.2
 License: GPLv2 or later
 
 SoundCloud Master is a light weight and shiny clean code wordpress plugin WIDGET that you need to show off and sell your music.
@@ -17,6 +17,8 @@ These are the main options we packed into this extension. SoundCloud player is a
 
 Easy and intuitive to use. Check the screenshots.
 
+Both the widget and the shortcode framework are fully mobile responsive, a must for any professional website.
+
 **SoundCloud Master... DJ's for wordpress**
 
 IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
@@ -24,12 +26,13 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 **LITE Version Contains:**
 
-* Display or hide Widget Title
+* Display, change or hide Widget Title
 * Soundcloud Connect Button
 
 **ADVANCED Version Contains:**
 
-* Display or hide Widget Title
+* Display, change or hide Widget Title
+* Fully Mobile Responsive
 * SoundCloud Connect Button
 * SoundCloud Lyrics Button
 * SoundCloud Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported)
@@ -92,6 +95,13 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 
 == Changelog ==
+
+= 4.2 =
+* Mobile Devices Responsive
+* Widget functions
+* Better buttons response
+* Adding index.php SEC
+* Adding option to change Widget Title
 
 = 4.1 =
 * Wordpress 3.8 Ready

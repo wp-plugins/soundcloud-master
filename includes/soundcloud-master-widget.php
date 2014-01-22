@@ -16,23 +16,32 @@ class soundcloud_master_widget extends WP_Widget {
 	function widget( $args, $instance ) {
 		extract( $args );
 		//Our variables from the widget settings.
-		$name = "SoundCloud Master";
-		$title = isset( $instance['title'] ) ? $instance['title'] :false;
+		$soundcloud_title = isset( $instance['soundcloud_title'] ) ? $instance['soundcloud_title'] :false;
+		$soundcloud_title_new = isset( $instance['soundcloud_title_new'] ) ? $instance['soundcloud_title_new'] :false;
 		$soundcloudspacer ="'";
 		$show_soundcloudconnect = isset( $instance['show_soundcloudconnect'] ) ? $instance['show_soundcloudconnect'] :false;
 		$soundcloudconnect_page = $instance['soundcloudconnect_page'];
 		echo $before_widget;
 		
 		// Display the widget title
-	if ( $title )
-		echo $before_title . $name . $after_title;
+	if ( $soundcloud_title ){
+		if (empty ($soundcloud_title_new)){
+		$soundcloud_title_new = "Soundcloud Master";
+		}
+		echo $before_title . $soundcloud_title_new . $after_title;
+	}
+	else{
+	}
 	//Display SoundClound Player
 
 	//Display SoundClound Connect
-	if ( $show_soundcloudconnect )
+	if ( $show_soundcloudconnect ){
 			$url_loc = plugins_url();
 			echo '<a href="'.$soundcloudconnect_page.'" target="_blank"><img src="'.$url_loc.'/soundcloud-master/images/btn-connect-s.png"></a>' .
 					'&nbsp;';
+	}
+	else{
+	}
 	//Display SoundCloud Lyrics
 
 	echo $after_widget;
@@ -41,15 +50,15 @@ class soundcloud_master_widget extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		//Strip tags from title and name to remove HTML
-		$instance['name'] = strip_tags( $new_instance['name'] );
-		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['soundcloud_title'] = strip_tags( $new_instance['soundcloud_title'] );
+		$instance['soundcloud_title_new'] = $new_instance['soundcloud_title_new'];
 		$instance['show_soundcloudconnect'] = $new_instance['show_soundcloudconnect'];
 		$instance['soundcloudconnect_page'] = $new_instance['soundcloudconnect_page'];
 		return $instance;
 	}
 	function form( $instance ) {
 	//Set up some default widget settings.
-	$defaults = array( 'name' => __('SoundCloud Master', 'soundcloud_master'), 'title' => true, 'show_soundcloudconnect' => false, 'soundcloudconnect_page' => false );
+	$defaults = array( 'soundcloud_title_new' => __('SoundCloud Master', 'soundcloud_master'), 'soundcloud_title' => true, 'soundcloud_title_new' => false, 'show_soundcloudconnect' => false, 'soundcloudconnect_page' => false );
 	$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 		<br>
@@ -57,8 +66,13 @@ class soundcloud_master_widget extends WP_Widget {
 	<p>
 	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
-	<input type="checkbox" <?php checked( (bool) $instance['title'], true ); ?> id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" />
-	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><b><?php _e('Display Widget Title', 'soundcloud_master'); ?></b></label></br>
+	<input type="checkbox" <?php checked( (bool) $instance['soundcloud_title'], true ); ?> id="<?php echo $this->get_field_id( 'soundcloud_title' ); ?>" name="<?php echo $this->get_field_name( 'soundcloud_title' ); ?>" />
+	<label for="<?php echo $this->get_field_id( 'soundcloud_title' ); ?>"><b><?php _e('Display Widget Title', 'soundcloud_master'); ?></b></label></br>
+	</p>
+	<p>
+	<label for="<?php echo $this->get_field_id( 'soundcloud_title_new' ); ?>"><?php _e('Change Title:', 'soundcloud_master'); ?></label>
+	<br>
+	<input id="<?php echo $this->get_field_id( 'soundcloud_title_new' ); ?>" name="<?php echo $this->get_field_name( 'soundcloud_title_new' ); ?>" value="<?php echo $instance['soundcloud_title_new']; ?>" style="width:auto;" />
 	</p>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 	<p>
