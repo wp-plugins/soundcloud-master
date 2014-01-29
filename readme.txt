@@ -68,7 +68,7 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 1. Use the Wordpress Installer, Updater
 2. Activate in the "Plugins" admin panel.
-3. Visit the "Widget Page | Soundcloud Master" to configure the settings and your template widget position.
+3. Visit the "Widget Page | Soundcloud Master Widgets" to configure widget settings and your template widget positions.
 4. [Soundcloud Master Documentation](http://wordpress.techgasp.com/soundcloud-master-documentation)
 
 
@@ -77,12 +77,12 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 = Issues with buttons display =
 * Please update to latest version. Up-to-date API's are available
 
-= Where is the Player? =
-* Advanced Version contains: Display or hide Widget Title, Display or hide Soundcloud Connect Button, Display or hide Soundcloud Lyrics Button, Display or hide Soundcloud Player, Shortcode Framework v2, publish widget inside pages and posts
+= Where are the Players? =
+* Advanced Version Add-ons contain the players
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
-= Insert Widget in Pages or Posts =
-* Advanced Version contains the shortcode framework v3
+= Insert Shortcode in Pages or Posts =
+* Advanced Version Add-ons contain the shortcode framework v3
 * Insert the universal shortcode into any page or post. [soundcloud-master-un]
 * Insert the individual shortcode into any page or post. [soundcloud-master]
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
@@ -102,8 +102,8 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 1. Widget With SoundCloud Buttons + SoundCloud Player with Set of Tracks.
 2. Widget With SoundCloud Buttons + SoundCloud Player with Single Track.
-3. Widget inside pages and posts. Shortcode framework v2 implementation. SoundCloud Player with Set of Tracks. 
-4. Widget inside pages and posts. Shortcode framework v2 implementations. SoundCloud Player with Single Track.
+3. Widget inside pages and posts. Shortcode framework v3 implementation. SoundCloud Player with Set of Tracks. 
+4. Widget inside pages and posts. Shortcode framework v3 implementations. SoundCloud Player with Single Track.
 
 
 == Changelog ==
