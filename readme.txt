@@ -2,11 +2,11 @@
 Contributors: Techgasp
 Tags: plugin, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
-Tested up to: 3.8
-Stable tag: 4.2
+Tested up to: 3.8.1
+Stable tag: 4.3
 License: GPLv2 or later
 
-SoundCloud Master is a light weight and shiny clean code wordpress plugin WIDGET that you need to show off and sell your music.
+SoundCloud Master is a light weight and shiny clean code wordpress plugin that you need to show off and sell your music.
 
 
 == Description ==
@@ -26,23 +26,34 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 **LITE Version Contains:**
 
-* Display, change or hide Widget Title
-* Soundcloud Connect Button
+* Display, Hide or Change Widget Title
+* Soundcloud Buttons Widget (Connect and Lyrics Button)
 
 **ADVANCED Version Contains:**
 
-* Display, change or hide Widget Title
+* Display, Hide or Change Widget Title
 * Fully Mobile Responsive
-* SoundCloud Connect Button
-* SoundCloud Lyrics Button
-* SoundCloud Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported)
-* Shortcode Framework v2. Publish widget inside pages and posts
+* Soundcloud Buttons Widget (Connect and Lyrics Button)
+* Soundcloud Basic Fast Page Loading Player Widget
+* Soundcloud Advanced Responsive Player Widget
+* SoundCloud Advanced Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported), full control over:
+* Player Color
+* Auto-Play
+* Display User
+* Display Playcount
+* Display Artwork
+* Display Comments
+* Display Share
+* Display Like
+* Display Download
+* Display Buy
+* Shortcode Framework v3. Universal Shortcode for all pages and posts and Individual Shortcode for each page or post
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
 **ONLINE DEMO**
 
 * Right of the page, sidebar widget
-* Inside the post, with shortcode framework v2
+* Inside the post, with shortcode framework v3
 * [Demo Link](http://wordpress.techgasp.com/soundcloud-master/)
 
 **More High Quality Plugins?**
@@ -71,15 +82,16 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
 = Insert Widget in Pages or Posts =
-* Advanced Version contains the shortcode framework v2
-* Insert the shortcode into any page or post. [soundcloud-master]
+* Advanced Version contains the shortcode framework v3
+* Insert the universal shortcode into any page or post. [soundcloud-master-un]
+* Insert the individual shortcode into any page or post. [soundcloud-master]
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
-= What's this Shortcode Framework v2 =
+= What's this Shortcode Framework v3 =
 * It's a framework developed by TechGasp and built upon wordpress marvellous resources
 * Allows users to quickly and easily display plugins or widgets inside their pages and posts
-* It's available in all TechGasp advanced version plugins. Lite versions plugins do not include shortcode framework v2
-* [About Shortcode Framework v2](http://wordpress.techgasp.com/new-wordpress-framework-from-techgasp/)
+* It's available in all TechGasp advanced version plugins. Lite versions plugins do not include shortcode framework v3
+* [About Shortcode Framework v3](http://wordpress.techgasp.com/techgasp-wordpress-framework-v3/)
 
 = Need More Help =
 * [Soundcloud Master Documentation](http://wordpress.techgasp.com/soundcloud-master-documentation)
@@ -95,6 +107,25 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 
 == Changelog ==
+
+= 4.3 =
+* New TechGasp Plugin Framework
+* New Plugin Menu
+* New Administrator Page
+* New Universal Shortcode that can be combined with Individual Shortcodes in Pages and Posts
+* Adding index SEC
+* New Soundcloud API, much easier to use
+* Player with new functions that will give control over:
+* Player Color
+* Auto-Play
+* Display User
+* Display Playcount
+* Display Artwork
+* Display Comments
+* Display Share
+* Display Like
+* Display Download
+* Display Buy
 
 = 4.2 =
 * Mobile Devices Responsive
@@ -154,8 +185,11 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 == Upgrade Notice ==
 
+= 4.3 =
+* IMPORTANT Upgrade to new TechGasp Plugin Framework v3
+
 = 4.0 =
-* IMPORTANT Upgrade to new TechGasp Plugin Framework
+* IMPORTANT Upgrade to new TechGasp Plugin Framework v2
 
 = 2.1 =
 * IMPORTANT Upgrade to Stable release

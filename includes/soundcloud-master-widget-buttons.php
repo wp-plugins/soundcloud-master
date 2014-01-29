@@ -1,16 +1,16 @@
 <?php
 //Hook Widget
-add_action( 'widgets_init', 'soundcloud_master_widget' );
+add_action( 'widgets_init', 'soundcloud_master_widget_buttons' );
 //Register Widget
-function soundcloud_master_widget() {
-register_widget( 'soundcloud_master_widget' );
+function soundcloud_master_widget_buttons() {
+register_widget( 'soundcloud_master_widget_buttons' );
 }
 
-class soundcloud_master_widget extends WP_Widget {
-	function soundcloud_master_widget() {
-	$widget_ops = array( 'classname' => 'SoundCloud Master', 'description' => __('SoundCloud Master is a light weight and shiny clean code wordpress plugin WIDGET that you need to show off and sell your music. ', 'SoundCloud Master') );
-	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'soundcloud_master_widget' );
-	$this->WP_Widget( 'soundcloud_master_widget', __('SoundCloud Master', 'soundcloud_master'), $widget_ops, $control_ops );
+class soundcloud_master_widget_buttons extends WP_Widget {
+	function soundcloud_master_widget_buttons() {
+	$widget_ops = array( 'classname' => 'SoundCloud Master Buttons', 'description' => __('SoundCloud Master Buttons Widget allows you to display the SoundCloud Connect and Lyrics Button. ', 'SoundCloud Master Buttons') );
+	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'soundcloud_master_widget_buttons' );
+	$this->WP_Widget( 'soundcloud_master_widget_buttons', __('SoundCloud Master Buttons', 'soundcloud_master'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -21,6 +21,8 @@ class soundcloud_master_widget extends WP_Widget {
 		$soundcloudspacer ="'";
 		$show_soundcloudconnect = isset( $instance['show_soundcloudconnect'] ) ? $instance['show_soundcloudconnect'] :false;
 		$soundcloudconnect_page = $instance['soundcloudconnect_page'];
+		$show_soundcloudlyrics = isset( $instance['show_soundcloudlyrics'] ) ? $instance['show_soundcloudlyrics'] :false;
+		$soundcloudlyrics_page = $instance['soundcloudlyrics_page'];
 		echo $before_widget;
 		
 		// Display the widget title
@@ -32,9 +34,11 @@ class soundcloud_master_widget extends WP_Widget {
 	}
 	else{
 	}
-	//Display SoundClound Player
-
-	//Display SoundClound Connect
+	//Prepare Connect Button
+		if (empty ($soundcloudconnect_page)){
+		$soundcloudconnect_page = "https://soundcloud.com/";
+		}
+	//Display SoundClound Connect Button
 	if ( $show_soundcloudconnect ){
 			$url_loc = plugins_url();
 			echo '<a href="'.$soundcloudconnect_page.'" target="_blank"><img src="'.$url_loc.'/soundcloud-master/images/btn-connect-s.png"></a>' .
@@ -42,8 +46,17 @@ class soundcloud_master_widget extends WP_Widget {
 	}
 	else{
 	}
-	//Display SoundCloud Lyrics
-
+	//Prepare Lyrics Button
+		if (empty ($soundcloudlyrics_page)){
+		$soundcloudlyrics_page = "https://soundcloud.com/";
+		}
+	//Display SoundCloud Lyrics Button
+	if ( $show_soundcloudlyrics ){
+			$url_loc = plugins_url();
+			echo '<a href="'.$soundcloudlyrics_page.'" target="_blank"><img src="'.$url_loc.'/soundcloud-master/images/btn-lyrics.png"></a>';
+	}
+	else{
+	}
 	echo $after_widget;
 	}
 	//Update the widget
@@ -54,11 +67,13 @@ class soundcloud_master_widget extends WP_Widget {
 		$instance['soundcloud_title_new'] = $new_instance['soundcloud_title_new'];
 		$instance['show_soundcloudconnect'] = $new_instance['show_soundcloudconnect'];
 		$instance['soundcloudconnect_page'] = $new_instance['soundcloudconnect_page'];
+		$instance['show_soundcloudlyrics'] = $new_instance['show_soundcloudlyrics'];
+		$instance['soundcloudlyrics_page'] = $new_instance['soundcloudlyrics_page'];
 		return $instance;
 	}
 	function form( $instance ) {
 	//Set up some default widget settings.
-	$defaults = array( 'soundcloud_title_new' => __('SoundCloud Master', 'soundcloud_master'), 'soundcloud_title' => true, 'soundcloud_title_new' => false, 'show_soundcloudconnect' => false, 'soundcloudconnect_page' => false );
+	$defaults = array( 'soundcloud_title_new' => __('SoundCloud Master', 'soundcloud_master'), 'soundcloud_title' => true, 'soundcloud_title_new' => false, 'show_soundcloudconnect' => false, 'soundcloudconnect_page' => false, 'show_soundcloudlyrics' => false, 'soundcloudlyrics_page' => false );
 	$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 		<br>
@@ -89,40 +104,20 @@ class soundcloud_master_widget extends WP_Widget {
 	<p>
 	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
 	&nbsp;
-	<b>Soundcloud Lyrics Button</b>
+	<input type="checkbox" <?php checked( (bool) $instance['show_soundcloudlyrics'], true ); ?> id="<?php echo $this->get_field_id( 'show_soundcloudlyrics' ); ?>" name="<?php echo $this->get_field_name( 'show_soundcloudlyrics' ); ?>" />
+	<label for="<?php echo $this->get_field_id( 'show_soundcloudlyrics' ); ?>"><b><?php _e('Soundcloud Lyrics Button', 'soundcloud_master'); ?></b></label></br>
 	</p>
-	<div class="description">Only available in advanced version.</div><br>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
-	&nbsp;
-	<b>Soundcloud Player</b>
+	<label for="<?php echo $this->get_field_id( 'soundcloudlyrics_page' ); ?>"><?php _e('insert SoundClound Lyrics Link:', 'soundclound master'); ?></label></br>
+	<input id="<?php echo $this->get_field_id( 'soundcloudlyrics_page' ); ?>" name="<?php echo $this->get_field_name( 'soundcloudlyrics_page' ); ?>" value="<?php echo $instance['soundcloudlyrics_page']; ?>" style="width:auto;" />
 	</p>
-	<div class="description">Only available in advanced version.</div>
-	<br>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
-	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
-	&nbsp;
-	<b>Shortcode Framework</b>
-	</p>
-	<div class="description">The shortcode framework allows you to insert Soundcloud Master inside Pages & Posts without the need of extra plugins or gimmicks. Fast page load times and top SEO. Only available in advanced version.</div>
-	<br>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 		<p>
 		<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
 		&nbsp;
 		<b>SoundCloud Master Website</b>
 		</p>
-		<p><a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Soundcloud Master Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master-documentation/" target="_blank" title="Soundcloud Master Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Soundcloud Master">Adv. Version</a></p>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
-	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
-	&nbsp;
-	<b>Advanced Version Updater:</b>
-	</p>
-	<div class="description">The advanced version updater allows to automatically update your advanced plugin. Only available in advanced version.</div>
-	<br>
+		<p><a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Soundcloud Master Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master-documentation/" target="_blank" title="Soundcloud Master Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Get Add-ons!">Get Add-ons!</a></p>
 	<?php
 	}
  }
