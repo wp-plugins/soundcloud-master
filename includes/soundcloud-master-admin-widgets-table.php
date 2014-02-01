@@ -35,7 +35,7 @@ class soundcloud_master_admin_widgets_table extends WP_List_Table {
 		</tr>
 		<tr class="alternate">
 			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-widget-advanced-admin.png', __FILE__); ?>" alt="Soundcloud Master" align="left" width="300px" height="135px" style="padding:5px;"/></td>
-			<td class="column-columnname"style="vertical-align:middle"><h3>Advanced Player Widget</h3><p>The "top of the line" Advanced Soundcloud Player Widget was specially designed to grant you all Soundcloud Player Options, you have full control over Size, Color, Auto-Play, Display Username, Display Artwork, Display Comments, Display Playcount, Display Share, Display Like, Display Download and Display Buy. All player options are customizable, still extremely easy to use.</p><p>This widget is fully <b>Mobile Responsive</b>, check the Add-ons Page.</p></td
+			<td class="column-columnname"style="vertical-align:middle"><h3>Advanced Player Widget</h3><p>The "top of the line" Advanced Soundcloud Player Widget was specially designed to grant you all Soundcloud Player Options, you have full control over Size, Color, Auto-Play, Display Username, Display Artwork, Display Comments, Display Playcount, Display Share, Display Like, Display Download and Display Buy. All player options are customizable, still extremely easy to use.</p><p>This widget is fully <b>Mobile Responsive</b>, check the Add-ons Page.</p></td>
 		</tr>
 	</tbody>
 </table>
