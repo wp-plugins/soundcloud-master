@@ -26,7 +26,7 @@ class soundcloud_master_admin_shortcodes_table_in extends WP_List_Table {
 
 	<tbody>
 		<tr class="alternate">
-			<td class="column-columnname" width="600"><img src="<?php echo plugins_url('../images/techgasp-soundcloud-master-backend-edit.png', __FILE__); ?>" alt="Soundcloud Master" align="left" width="600px" height="265px" style="padding:5px;"/></td>
+			<td class="column-columnname" width="600"><img src="<?php echo plugins_url('../images/techgasp-soundcloud-master-backend-edit.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="600px" height="265px" style="padding:5px;"/></td>
 			<td class="column-columnname">
 <h3>Individual Shortcode</h3>
 <p>Soundcloud Master uses TechGasp Wordpress Framework. The <b>Individual Shortcode</b> is easy to use and can be found when you edit a post or a page under the wordpress text editor. Once you have created your shortcode, Just insert the shortcode <b>[soundcloud-master]</b> anywhere inside your text.</p>

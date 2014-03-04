@@ -26,7 +26,7 @@ class soundcloud_master_admin_table_header extends WP_List_Table {
 
 	<tbody>
 		<tr class="alternate">
-			<td class="column-columnname" width="387"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-logo.png', __FILE__); ?>" alt="Soundcloud Master" align="left" width="387px" height="171px" style="padding:5px;"/></td>
+			<td class="column-columnname" width="387"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-logo.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="387px" height="171px" style="padding:5px;"/></td>
 			<td class="column-columnname">
 <p>Major player in the Content Management System world! Wordpress, Joomla and Jomsocial Partner with more than 100 high quality, error free Extensions. We provide website customizations and development, SEO Optimization, Facebook Apps, etc. We have fast & furious specialized Hosting for WordPress and Joomla. Our promise, the use of minimal error free code with fast loading times. Check our website for more high quality extensions. Stay up to date by "like" and "follow" our facebook and twitter page for fresh news, releases and upgrades and updates.</p>
 <p>

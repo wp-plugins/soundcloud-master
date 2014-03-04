@@ -3,7 +3,7 @@ Contributors: Techgasp
 Tags: plugin, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 4.3
+Stable tag: 4.3.5
 License: GPLv2 or later
 
 SoundCloud Master is a light weight and shiny clean code wordpress plugin that you need to show off and sell your music.
@@ -14,6 +14,8 @@ SoundCloud Master is a light weight and shiny clean code wordpress plugin that y
 SoundCloud is the new music network on the block that allows users to create, record and share sounds and music with family, friends and the world. SoundClound Master was specially built for wordpress in iframe and integrates perfectly in any widget position and template color scheme.
 
 These are the main options we packed into this extension. SoundCloud player is able to play single tracks or full user music sets... nothing better than a nice music playlist, full control over player width and height, full control over color scheme, display the track or music set artwork and, auto-play.
+
+Includes TechGasp BANG! Artwork, new player setting for users with beautiful cover artworks. Awesome.
 
 Easy and intuitive to use. Check the screenshots.
 
@@ -33,9 +35,12 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 * Display, Hide or Change Widget Title
 * Fully Mobile Responsive
+
 * Soundcloud Buttons Widget (Connect and Lyrics Button)
+
 * Soundcloud Basic Fast Page Loading Player Widget
-* Soundcloud Advanced Responsive Player Widget
+
+* Soundcloud Advanced Responsive Player Widget:
 * SoundCloud Advanced Player (full nine yards SoundCloud Player. Single tracks and Sets of Tracks Supported), full control over:
 * Player Color
 * Auto-Play
@@ -47,7 +52,12 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 * Display Like
 * Display Download
 * Display Buy
-* Shortcode Framework v3. Universal Shortcode for all pages and posts and Individual Shortcode for each page or post
+* Activate TechGasp BANG! Artwork, new player display setting for users with great cover artworks
+
+* TechGasp Shortcode Framework v3:
+* Universal Shortcode for all pages and posts, same Shortocde applies to all pages and posts. Option to Automatically add the shortcode to all pages and posts or manually add the pre-built shortcode individually per page or post. Option to automatically only show the shortcode in Posts and not Pages. Option to Automatically show the shortcode After the Title or After the Content.
+* Individual Shortcode for each page or post, individual customized shortcode per page or post
+* Shortcodes allow you to professionally display your plugin inside pages and posts maintaining fast page load times and excellent Google SEO
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
 
 **ONLINE DEMO**
@@ -102,11 +112,22 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 1. Widget With SoundCloud Buttons + SoundCloud Player with Set of Tracks.
 2. Widget With SoundCloud Buttons + SoundCloud Player with Single Track.
-3. Widget inside pages and posts. Shortcode framework v3 implementation. SoundCloud Player with Set of Tracks. 
-4. Widget inside pages and posts. Shortcode framework v3 implementations. SoundCloud Player with Single Track.
+3. Widget With SoundCloud Buttons + SoundCloud with TechGasp BANG! Artwork
+4. Widget inside pages and posts. Shortcode framework v3 implementation. SoundCloud Player with Set of Tracks. 
+5. Widget inside pages and posts. Shortcode framework v3 implementations. SoundCloud Player with Single Track.
 
 
 == Changelog ==
+
+= 4.3.5 =
+* TechGasp Plugin Framework v3 Improvements and Upgrades
+* New Universal Shortcode Options:
+* Option to Automatically add the shortcode to all pages and posts or manually add the pre-built shortcode individually per page and post
+* Option to Automatically only show the shortcode in Posts, not Pages
+* Option to Automatically show the shortcode After the Title or After the Content
+* New Advanced Responsive Widget setting, TechGasp BANG! Artwork. Awesome Cover Artwork Display
+* Code clean up and speed up
+* Fixed a couple of warnings
 
 = 4.3 =
 * New TechGasp Plugin Framework

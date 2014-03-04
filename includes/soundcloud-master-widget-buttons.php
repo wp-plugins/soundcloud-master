@@ -115,9 +115,9 @@ class soundcloud_master_widget_buttons extends WP_Widget {
 		<p>
 		<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
 		&nbsp;
-		<b>SoundCloud Master Website</b>
+		<b><?php echo get_option('soundcloud_master_name'); ?> Website</b>
 		</p>
-		<p><a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Soundcloud Master Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master-documentation/" target="_blank" title="Soundcloud Master Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Get Add-ons!">Get Add-ons!</a></p>
+		<p><a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="<?php echo get_option('soundcloud_master_name'); ?> Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/soundcloud-master-documentation/" target="_blank" title="<?php echo get_option('soundcloud_master_name'); ?> Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Visit Website">Get Add-ons</a></p>
 	<?php
 	}
  }

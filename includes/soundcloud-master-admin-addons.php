@@ -17,7 +17,7 @@ function soundcloud_master_admin_addons(){
 ?>
 <div class="wrap">
 <div style="width:40px; vertical-align:middle; float:left;"><img src="<?php echo plugins_url('../images/techgasp-minilogo.png', __FILE__); ?>" alt="' . esc_attr__( 'TechGasp Plugins') . '" /><br /></div>
-<h2><b>&nbsp;Soundcloud Master Add-ons</b></h2>
+<h2><b>&nbsp;<?php echo get_option('soundcloud_master_name'); ?> Add-ons</b></h2>
 <?php
 if(!class_exists('soundcloud_master_admin_addons_table')){
 	require_once( dirname( __FILE__ ) . '/soundcloud-master-admin-addons-table.php');
@@ -39,9 +39,9 @@ $wp_list_table->display();
 <p>
 <a class="button-secondary" href="http://wordpress.techgasp.com" target="_blank" title="Visit Website">More TechGasp Plugins</a>
 <a class="button-secondary" href="http://wordpress.techgasp.com/support/" target="_blank" title="Facebook Page">TechGasp Support</a>
-<a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Visit Website">Soundcloud Master Info</a>
-<a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master-documentation/" target="_blank" title="Visit Website">Soundcloud Master Documentation</a>
-<a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Get Add-ons!">Get Add-ons!</a>
+<a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Visit Website"><?php echo get_option('soundcloud_master_name'); ?> Info</a>
+<a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master-documentation/" target="_blank" title="Visit Website"><?php echo get_option('soundcloud_master_name'); ?> Documentation</a>
+<a class="button-primary" href="http://wordpress.techgasp.com/soundcloud-master/" target="_blank" title="Visit Website">Get Add-ons</a>
 </p>
 <?php
 }

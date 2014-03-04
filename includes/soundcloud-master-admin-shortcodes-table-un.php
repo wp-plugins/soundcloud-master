@@ -34,20 +34,18 @@ class soundcloud_master_admin_shortcodes_table_un extends WP_List_Table {
 	<tbody>
 		<tr class="alternate">
 			<th class="check-column" scope="row"></th>
-			<td class="column-columnname" width="200">
-<p>Check the Add-ons Page</p>
+			<td class="column-columnname" width="220">
+<p>Check Add-ons Page.</p>
 			</td>
-			<td class="column-columnname" width="200"></td>
-			<td class="column-columnname"></td>
+			<td class="column-columnname" width="250"></td>
+			<td class="column-columnname" style="vertical-align:middle"></td>
 		</tr>
 	</tbody>
 </table>
-<p class="submit"><input class='button-primary' type='submit' name='update' value='<?php _e("Save Shortcode UN", 'spam_master'); ?>' id='submitbutton' /></p>
+<p class="submit"><input class='button-primary' type='submit' name='update' value='<?php _e("Save Shortcode UN", 'soundcloud_master'); ?>' id='submitbutton' /></p>
 </fieldset>
 </form>
 <?php
-//END DISPLAY
-}
+	}
 //CLASS ENDS
 }
-?>

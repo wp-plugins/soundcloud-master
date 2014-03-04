@@ -2,7 +2,7 @@
 /**
 Plugin Name: SoundCloud Master
 Plugin URI: http://wordpress.techgasp.com/soundcloud-master/
-Version: 4.3
+Version: 4.3.5
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: soundcloud-master
@@ -27,9 +27,9 @@ if(!class_exists('soundcloud_master')) :
 ///////DEFINE ID//////
 define('SOUNDCLOUD_MASTER_ID', 'soundcloud-master');
 ///////DEFINE VERSION///////
-define( 'soundcloud_master_VERSION', '4.3' );
+define( 'soundcloud_master_VERSION', '4.3.5' );
 global $soundcloud_master_version, $soundcloud_master_name;
-$soundcloud_master_version = "4.3"; //for other pages
+$soundcloud_master_version = "4.3.5"; //for other pages
 $soundcloud_master_name = "Soundcloud Master"; //pretty name
 if( is_multisite() ) {
 update_site_option( 'soundcloud_master_installed_version', $soundcloud_master_version );

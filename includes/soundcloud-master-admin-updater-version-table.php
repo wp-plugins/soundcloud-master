@@ -64,10 +64,10 @@ echo '<h3>Version '.get_option('soundcloud_master_newest_version').'</h3>';
 <?php
 
 if(get_site_option( 'soundcloud_master_installed_version')  == get_site_option( 'soundcloud_master_newest_version' )){
-	echo '<img src="'.plugins_url('../images/techgasp-check-yes.png', __FILE__).'" alt="Soundcloud Master" width="90px" style="vertical-align:bottom" /></td>';
+	echo '<img src="'.plugins_url('../images/techgasp-check-yes.png', __FILE__).'" alt="'.get_option('soundcloud_master_name').'" width="90px" style="vertical-align:bottom" /></td>';
 }
 else{
-	echo '<img src="'.plugins_url('../images/techgasp-check-no.png', __FILE__).'" alt="Soundcloud Master" width="90px" style="vertical-align:bottom" /></td>';
+	echo '<img src="'.plugins_url('../images/techgasp-check-no.png', __FILE__).'" alt="'.get_option('soundcloud_master_name').'" width="90px" style="vertical-align:bottom" /></td>';
 }
 ?>
 		</tr>
