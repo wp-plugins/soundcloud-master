@@ -2,8 +2,8 @@
 Contributors: Techgasp
 Tags: plugin, soundcloud, sound, music, mp3, wav, player, playlist, embedded, music sets, sets, sound cloud
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 4.3.5
+Tested up to: 3.8.2
+Stable tag: 4.3.6
 License: GPLv2 or later
 
 SoundCloud Master is a light weight and shiny clean code wordpress plugin that you need to show off and sell your music.
@@ -55,7 +55,7 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 * Activate TechGasp BANG! Artwork, new player display setting for users with great cover artworks
 
 * TechGasp Shortcode Framework v3:
-* Universal Shortcode for all pages and posts, same Shortocde applies to all pages and posts. Option to Automatically add the shortcode to all pages and posts or manually add the pre-built shortcode individually per page or post. Option to automatically only show the shortcode in Posts and not Pages. Option to Automatically show the shortcode After the Title or After the Content.
+* Universal Shortcode for all pages and posts, same Shortcode applies to all pages and posts. Option to Automatically add the shortcode to all pages and posts or manually add the pre-built shortcode individually per page or post. Option to automatically only show the shortcode in Posts and not Pages. Option to Automatically show the shortcode After the Title or After the Content.
 * Individual Shortcode for each page or post, individual customized shortcode per page or post
 * Shortcodes allow you to professionally display your plugin inside pages and posts maintaining fast page load times and excellent Google SEO
 * [Advanced Version Link](http://wordpress.techgasp.com/soundcloud-master/)
@@ -118,6 +118,9 @@ IMPORTANT: Errors and conflicts free. NO JAVASCRIPT or AJAX
 
 
 == Changelog ==
+
+= 4.3.6 =
+* Added automatic deletion of site_transients
 
 = 4.3.5 =
 * TechGasp Plugin Framework v3 Improvements and Upgrades
