@@ -8,7 +8,7 @@ register_widget( 'soundcloud_master_widget_buttons' );
 
 class soundcloud_master_widget_buttons extends WP_Widget {
 	function soundcloud_master_widget_buttons() {
-	$widget_ops = array( 'classname' => 'SoundCloud Master Buttons', 'description' => __('SoundCloud Master Buttons Widget allows you to display the SoundCloud Connect and Lyrics Button. ', 'SoundCloud Master Buttons') );
+	$widget_ops = array( 'classname' => 'SoundCloud Master Buttons', 'description' => __('SoundCloud Master Buttons Widget allows you to display the SoundCloud Connect and Lyrics Button.', 'SoundCloud Master Buttons') );
 	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'soundcloud_master_widget_buttons' );
 	$this->WP_Widget( 'soundcloud_master_widget_buttons', __('SoundCloud Master Buttons', 'soundcloud_master'), $widget_ops, $control_ops );
 	}
@@ -28,9 +28,17 @@ class soundcloud_master_widget_buttons extends WP_Widget {
 		// Display the widget title
 	if ( $soundcloud_title ){
 		if (empty ($soundcloud_title_new)){
-		$soundcloud_title_new = "Soundcloud Master";
-		}
+			if(is_multisite()){
+			$soundcloud_title_new = get_site_option('soundcloud_master_name');
+			}
+			else{
+			$soundcloud_title_new = get_option('soundcloud_master_name');
+			}
 		echo $before_title . $soundcloud_title_new . $after_title;
+		}
+		else{
+		echo $before_title . $soundcloud_title_new . $after_title;
+		}
 	}
 	else{
 	}

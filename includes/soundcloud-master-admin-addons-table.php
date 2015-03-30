@@ -30,13 +30,21 @@ class soundcloud_master_admin_addons_table extends WP_List_Table {
 		<tr class="alternate">
 			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-widget-front-buttons.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="300px" height="139px" style="padding:5px;"/></td>
 			<td class="column-columnname"style="vertical-align:middle"><h3>Buttons Widget</h3><p>The perfect widget if you only want to display the Soundcloud Connect Button or the Lyrics Button. A great way to connect people to your Soundcloud profile or to display your cool lyrics page.</p><p>This widget works great when published under any of the below players. You can activate both buttons or a single one, navigate to your wordpress widgets page and start using it.</p></td>
-
 			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-yes.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
+		</tr>
+		<tr>
+			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-widget-back-dashboard.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="300px" height="139px" style="padding:5px;"/></td>
+			<td class="column-columnname"style="vertical-align:middle"><h3>Administrator Dashboard Widget</h3><p>Cool player widget to listen to your favourite Soundcloud Tracks while working on your Wordpress Administrator. Go to your Wordpress Dashboard page and start using it!!!</p></td>
+			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-no.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
+		</tr>
+		<tr class="alternate">
+			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-widget-front-profile.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="300px" height="139px" style="padding:5px;"/></td>
+			<td class="column-columnname"style="vertical-align:middle"><h3>Soundcloud Profile Widget</h3><p>Fast loading widget to display the Soundcloud User Profiles. A great way to connect people to your Soundcloud Profile, show off your work, sell it and gather followers and likes.</p><p>Navigate to your wordpress widgets page and start using it.</p></td>
+			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-no.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
 		</tr>
 		<tr>
 			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-widget-front-basic.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="300px" height="139px" style="padding:5px;"/></td>
 			<td class="column-columnname"style="vertical-align:middle"><h3>Basic Player Fast Loading Widget</h3><p>The Basic Soundcloud Player Widget was specially designed for fast loading times and is perfect to display a single track. All player options are on automatic settings so it's easy and fast to deploy by any wordpress administrator.</p><p>This widget is fully <b>Mobile Responsive</b>, navigate to your wordpress widgets page and start using it.</p></td>
-
 			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-no.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
 		</tr>
 		<tr class="alternate">
@@ -60,9 +68,9 @@ class soundcloud_master_admin_addons_table extends WP_List_Table {
 			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-no.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
 		</tr>
 		<tr class="alternate">
-			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-admin-addons-support.png', __FILE__); ?>" alt="<?php echo get_option('facebook_comments_master_name'); ?>" align="left" width="300px" height="139px" style="padding:5px;"/></td>
+			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-soundcloudmaster-admin-addons-support.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="300px" height="139px" style="padding:5px;"/></td>
 			<td class="column-columnname"style="vertical-align:middle"><h3>Award Winning Professional Support</h3><p>Need professional help deploying this plugin? TechGasp provides 24/7 award winning professional wordpress support for all advanced version costumers and replies to support tickets usually within minutes of being received. Support Us and we will Support You.</p></td>
-			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-no.png', __FILE__); ?>" alt="<?php echo get_option('facebook_comments_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
+			<td class="column-columnname" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-check-no.png', __FILE__); ?>" alt="<?php echo get_option('soundcloud_master_name'); ?>" align="left" width="200px" height="121px" style="padding:5px;"/></td>
 		</tr>
 	</tbody>
 </table>
